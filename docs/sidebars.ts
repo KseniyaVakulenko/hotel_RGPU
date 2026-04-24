@@ -6,9 +6,9 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Гостиница РГПУ',
       items: [
-        'hotel-project/plan',
-        'hotel-project/users',
-        'hotel-project/architecture',
+        'docs/hotel-project/plan',
+        'docs/hotel-project/users',
+        'docs/hotel-project/architecture',
       ],
     },
   ],
