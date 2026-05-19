@@ -9,6 +9,9 @@ const sidebars: SidebarsConfig = {
         'hotel-project/plan',
         'hotel-project/users',
         'hotel-project/architecture',
+        'hotel-project/brd-srs',      // добавить
+        'hotel-project/gost-15288',    // добавить
+        'hotel-project/api-spec',      // добавить
       ],
     },
   ],
