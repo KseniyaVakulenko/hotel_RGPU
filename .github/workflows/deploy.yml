@@ -26,16 +26,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 18  # Docusaurus стабильно работает на 18
           cache: npm
-          cache-dependency-path: ./docs/package-lock.json
 
       - name: Install dependencies
-        working-directory: ./docs
-        run: npm ci
+        run: npm ci  # Убираем working-directory, потому что package.json в корне
 
       - name: Build website
-        working-directory: ./docs
         run: npm run build
 
       - name: Setup Pages
@@ -44,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/build
+          path: ./build  # Docusaurus собирает в папку build (не docs/build)
 
   deploy:
     name: Deploy to GitHub Pages
